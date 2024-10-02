@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration form- VSDC</title>
+    <link rel="shortcut icon" href="image/favicon.ico" type="image/svg+xml">
+    <link rel="stylesheet" href="/css/admission_style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+	<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+	
+</head>
+<body>
+
+  <section class="header">
+    <nav>
+        <!-- <a href="index.html"></a> -->
+		<a href="/"><img src = 'image/VSDC-Logo.png' class = 'logo'></img></a>
+        <div class="nav-links" id="navLinks">
+          <span class="icon" onclick="hidemenu()">&#10005;</span>  
+          <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/studentregister">Student Register</a></li>
+				<li><a href="https://drive.google.com/file/d/1XCOZtjQ9jLd6XR9TE2UHUWhz_vA1nm0A/view?usp=sharing">Brochure</a></li>
+                <!-- <li><a href="index.html#course_call">Course</a></li>
+                <li><a href="fees_page.html">Fees</a></li>
+                <li><a href="Contact_page.html">Contact</a></li> -->
+            </ul>
+        </div> 
+        <span class="icon" onclick="showmenu()">&#9776;</span>
+    </nav>
+
+	<div class="wrapper">
+		<div class="r_form_wrap">
+			
+			<div class="title">
+				<p>Registration form (Details) - Faculty <a href="/"><i class="fa-solid fa-user-xmark"></i></a></p>
+			</div>
+			
+			<!-- Admission from -->
+			<div class="r_form">
+				<form id = 'registerform'>
+				  
+				  <!-- Faculty Type Dropdown -->
+				  <div class="input_wrap">
+					<label for="facultyType">What kind of faculty</label>
+					<div class="input_item">
+					  <i class="fa fa-caret-square-o-down" aria-hidden="true" id="icon"></i>
+					  <select id="facultyType" name="facultyType" class="input" required>
+						<option value="" selected disabled hidden>Select Faculty Type</option>
+						<option value="ida">IDA</option>
+						<option value="non-ida">Non-IDA</option>
+					  </select>
+					</div>
+				  </div>
+			  
+				  <!-- Banquet Field  -->
+				  <div class="input_wrap" id="banquetField">
+					<label for="banquet">Banquet or not</label>
+					<div class="input_item">
+					  <i class="fa fa-caret-square-o-down" aria-hidden="true" id="icon"></i>
+					  <select id="banquet" name="banquet" class="input">
+						<option value="" selected disabled hidden>Select Banquet Option</option>
+						<option value="with-banquet">With Banquet</option>
+						<option value="without-banquet">Without Banquet</option>
+					  </select>
+					</div>
+				  </div>
+			  
+				  <!-- Name Field -->
+				  <div class="input_wrap">
+					<label for="yourname">Your Name</label>
+					<div class="input_item">
+					  <i class="fa fa-user" id="icon"></i>
+					  <input type="text" name="yourname" class="input" id="yourname" placeholder="Enter your name" required>
+					</div>
+				  </div>
+			  
+				  <!-- Speciality Field -->
+				  <div class="input_wrap">
+					<label for="speciality">Speciality</label>
+					<div class="input_item">
+					  <i class="fa fa-briefcase" id="icon"></i>
+					  <input type="text" name="speciality" class="input" id="speciality" placeholder="Enter your speciality" required>
+					</div>
+				  </div>
+			  
+				  <!-- Email Field -->
+				  <div class="input_wrap">
+					<label for="emailaddress">Email Address</label>
+					<div class="input_item">
+					  <i class="fa fa-envelope" id="icon"></i>
+					  <input type="email" name="emailaddress" class="input" id="emailaddress" placeholder="Enter your email" required>
+					</div>
+				  </div>
+			  
+				  <!-- Phone Field -->
+				  <div class="input_wrap">
+					<label for="phone">Phone</label>
+					<div class="input_item">
+					  <i class="fa fa-phone-square" id="icon"></i>
+					  <input type="tel" name="phone" class="input" id="phone" placeholder="Enter your phone number" required>
+					</div>
+				  </div>
+			  
+				  <!-- KSDC Registration Number Field -->
+				  <div class="input_wrap">
+					<label for="ksdc">KSDC Registration Number</label>
+					<div class="input_item">
+					  <i class="fa fa-id-card" id="icon"></i>
+					  <input type="text" name="ksdc" class="input" id="ksdc" placeholder="Ex: 1234-A" required>
+					</div>
+				  </div>
+				  
+				  <button type="button" class="button" onclick="storePart1Data()"> Proceed to Payment </button>
+				  <button type="reset" class="clear_ad"> Reset </button>
+				  
+				</form>
+			</div>
+	
+		</div>
+	</div>
+	</section>
+	<div class="none_div">
+
+	</div>
+	</body>
+	<!-- Javascript for this Web page -->
+	<script src=" https://smtpjs.com/v3/smtp.js"></script>
+	<script src = 'javascript/main_script.js'></script>
+	<script src = 'javascript/registrationPage.js'></script>		
+			 
+</script>
+</html>

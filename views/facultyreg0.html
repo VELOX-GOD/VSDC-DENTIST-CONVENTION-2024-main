@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration form- VSDC</title>
+  <link rel="shortcut icon" href="image/favicon.ico" type="image/svg+xml">
+  <link rel="stylesheet" href="/css/admission_style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+
+</head>
+
+<body>
+
+  <section class="header">
+    <nav>
+      <!-- <a href="index.html"></a> -->
+      <a href="/"><img src='image/VSDC-Logo.png' class='logo'></img></a>
+      <div class="nav-links" id="navLinks">
+        <span class="icon" onclick="hidemenu()">&#10005;</span>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/studentregister">Student Register</a></li>
+          <li><a href="https://drive.google.com/file/d/1XCOZtjQ9jLd6XR9TE2UHUWhz_vA1nm0A/view?usp=sharing">Brochure</a></li>
+          
+        </ul>
+      </div>
+      <span class="icon" onclick="showmenu()">&#9776;</span>
+    </nav>
+
+    <div class="wrapper">
+      <div class="r_form_wrap">
+
+        <div class="title">
+          <p>Registration form (Details) - Faculty <a href="/"><i class="fa-solid fa-user-xmark"></i></a></p>
+        </div>
+
+        <!-- Admission from -->
+        <div class="r_form">
+          <form id='registerform'>
+
+            <!-- Payment Detail 1 -->
+            <div class="input_wrap">
+              <h3>IDA Members</h3>
+              <ul>
+                <li>With Banquet - Rs.1500/-</li>
+                <li>Only Scientific - Rs.600/-</li>
+              </ul>
+              <div class="input_wrap">
+                <h3>Non-IDA Members</h3>
+                <ul>
+                  <li>With Banquet - Rs.2000/-</li>
+                  <li>Only Scientific - Rs.750/-</li>
+                </ul>
+
+
+              </div>
+
+              <button type="button" class="button" onclick="window.location.href = '/facultyregisterdetails';"> Proceed to Registration </button>
+
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <div class="none_div">
+
+  </div>
+</body>
+<!-- Javascript for this Web page -->
+<script src=" https://smtpjs.com/v3/smtp.js"></script>
+<script src='javascript/main_script.js'></script>
+<script src='javascript/registrationPage.js'></script>
+
+</script>
+
+</html>

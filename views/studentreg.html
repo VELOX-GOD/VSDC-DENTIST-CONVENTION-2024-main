@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration form- VSDC</title>
+    <link rel="shortcut icon" href="image/favicon.ico" type="image/svg+xml">
+    <link rel="stylesheet" href="/css/admission_style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+	<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+
+	
+</head>
+<body>
+
+  <section class="header">
+    <nav>
+        <!-- <a href="index.html"></a> -->
+        <a href="/"><img src = 'image/VSDC-Logo.png' class = 'logo'></img></a>
+        <div class="nav-links" id="navLinks">
+          <span class="icon" onclick="hidemenu()">&#10005;</span>  
+          <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/facultyregister">Faculty Registration</a></li>
+                >
+                <li><a href="https://drive.google.com/file/d/1XCOZtjQ9jLd6XR9TE2UHUWhz_vA1nm0A/view?usp=sharing">Brochure</a></li>
+            </ul>
+        </div> 
+        <span class="icon" onclick="showmenu()">&#9776;</span>
+    </nav>
+
+	<div class="wrapper">
+        <div class="r_form_wrap">
+			
+			<div class="title">
+				<p>Registration form (Details) - Student <a href="/"><i class="fa-solid fa-user-xmark"></i></a></p>
+			</div>
+		<div class="r_form">
+            <form id = "registerform">
+              
+              <!-- Name Field -->
+              <div class="input_wrap">
+                <label for="name">Name</label>
+                <div class="input_item">
+                  <i class="fa fa-user" id="icon"></i>
+                  <input type="text" name="name" class="input" id="name" placeholder="Enter your name" required>
+                </div>
+              </div>
+          
+              <!-- College Name Field -->
+              <div class="input_wrap">
+                <label for="collegeName">College Name</label>
+                <div class="input_item">
+                  <i class="fa fa-university" id="icon"></i>
+                  <input type="text" name="collegeName" class="input" id="collegeName" placeholder="Enter your college name" required>
+                </div>
+              </div>
+          
+              <!-- Email Field -->
+              <div class="input_wrap">
+                <label for="email">Email Address</label>
+                <div class="input_item">
+                  <i class="fa fa-envelope" id="icon"></i>
+                  <input type="email" name="email" class="input" id="email" placeholder="Enter your email" required>
+                </div>
+              </div>
+          
+              <!-- Phone Field -->
+              <div class="input_wrap">
+                <label for="phone">Phone</label>
+                <div class="input_item">
+                  <i class="fa fa-phone-square" id="icon"></i>
+                  <input type="tel" name="phone" class="input" id="phone" placeholder="Enter your phone number" required>
+                </div>
+              </div>
+          
+              <!-- Currently Pursuing Field -->
+              <div class="input_wrap">
+                <label for="pursuing">Currently Pursuing</label>
+                <div class="input_item">
+                  <i class="fa fa-graduation-cap" aria-hidden="true" id="icon"></i>
+                  <select id="pursuing" name="pursuing" class="input" required>
+                    <option value="" selected disabled hidden>Select your course</option>
+                    <option value="bds">BDS</option>
+                    <option value="mds">MDS</option>
+                  </select>
+                </div>
+              </div>
+          
+              <!-- Student Type Field -->
+              <div class="input_wrap">
+                <label for="studentType">Student Type</label>
+                <div class="input_item">
+                  <i class="fa fa-users" aria-hidden="true" id="icon"></i>
+                  <select id="studentType" name="studentType" class="input" onchange="togglePosterField()" required>
+                    <option value="" selected hidden disabled>Select student type</option>
+                    <option value="delegates">Delegates</option>
+                    <option value="poster">Poster Presentation</option>
+                  </select>
+                </div>
+              </div>
+          
+              <!-- Poster Upload Field (Hidden by Default) -->
+              <div class="input_wrap" id="posterField" style="display: none;">
+                <label for="poster">Submit you poster</label>
+                <div class="input_item">
+                  
+                  <a href="https://forms.gle/skheb4oEmvfwPQvD9">Fill this form , then proceed to payment</a>
+                </div>
+              </div>
+
+              
+
+              <button type="button" class="button" onclick="storePart1Data()"> Proceed to Payment </button>
+				      <button type="reset" class="clear_ad"> Reset </button>
+          
+            </form>
+          </div>
+          
+          
+          
+	</div>
+	</section>
+	<div class="none_div">
+
+	</div>
+	</body>
+
+  
+	<!-- Javascript for this Web page -->
+	<script src=" https://smtpjs.com/v3/smtp.js"></script>
+  <script src = 'javascript/main_script.js'></script>
+	<script src = 'javascript/registrationPage.js'></script>
+</html>
